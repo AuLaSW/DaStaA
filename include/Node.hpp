@@ -19,18 +19,18 @@ public:
     virtual ~Node();
 
     // return the next node this node points to
-    shared_ptr<Node<T>> getNext() const;
+    const shared_ptr<const Node<T>> getNext() const;
     // return the previous node this node points to
-    shared_ptr<Node<T>> getPrev() const;
+    const shared_ptr<const Node<T>> getPrev() const;
     // get the value of the node
-    shared_ptr<T> getValue() const;
+    const shared_ptr<const T> getValue() const;
 
     // set the next node this node points to
-    void setNext(shared_ptr<Node<T>>);
+    void setNext(const shared_ptr<const Node<T>>);
     // set the previous node this node points to
-    void setPrev(shared_ptr<Node<T>>);
+    void setPrev(const shared_ptr<const Node<T>>);
     // set the value of the node
-    void setValue(shared_ptr<T>);
+    void setValue(const shared_ptr<const T>);
 
 private:
     shared_ptr<Node<T>> next;
