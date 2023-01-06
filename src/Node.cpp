@@ -2,8 +2,8 @@
 #include <stdexcept>
 #include "../include/Node.hpp"
 
-typedef const shared_ptr<const Node<T>> ccNode
-typedef const shared_ptr<const T> ccT
+typedef const shared_ptr<Node<T>> ccNode
+typedef const shared_ptr<T> ccT
 
 /*
 
