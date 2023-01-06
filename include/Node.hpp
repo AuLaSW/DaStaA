@@ -26,11 +26,11 @@ public:
     shared_ptr<T> getValue() const;
 
     // set the next node this node points to
-    void setNext(shared_ptr<Node<T>>) const;
+    void setNext(shared_ptr<Node<T>>);
     // set the previous node this node points to
-    void setPrev(shared_ptr<Node<T>>) const;
+    void setPrev(shared_ptr<Node<T>>);
     // set the value of the node
-    void setValue(shared_ptr<T>) const;
+    void setValue(shared_ptr<T>);
 
 private:
     shared_ptr<Node<T>> next;
