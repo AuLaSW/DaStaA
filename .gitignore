@@ -1,3 +1,4 @@
 # ignore the build files
 /build/*
 /unit-tests/build/*
+/unit-tests/example_tests/*
