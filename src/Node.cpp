@@ -1,4 +1,5 @@
 #define NODE
+#include <stdexcept>
 #include "../include/Node.hpp"
 
 typedef const shared_ptr<const Node<T>> ccNode
@@ -37,13 +38,22 @@ Getters
 
 // returns the next node
 template<typename T>
-ccNode Node<T>::getNext() const {
+ccNode Node<T>::getNext() const {	
 	return this.next;
 }
 
 // returns the previous node
+// This function throws an error when there is
+// no previous node. Singly Linked Lists cannot
+// have nodes that point to previous nodes, so
+// throwing an error in this state should help
+// keep the program from doing that.
 template<typename T>
 ccNode Node<T>::getPrev() const {
+	if (this.prev == nullptr) {
+		throw std::runtime_exeption("No previous node found.");
+	}
+	
 	return this.prev;
 }
 
