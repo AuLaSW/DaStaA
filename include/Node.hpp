@@ -13,7 +13,7 @@ public:
     Node();
 
     // copy constructor
-    Node(shared_ptr<Node<T>>);
+    Node(const shared_ptr<const Node<T>>);
 
     // destructor
     virtual ~Node();
